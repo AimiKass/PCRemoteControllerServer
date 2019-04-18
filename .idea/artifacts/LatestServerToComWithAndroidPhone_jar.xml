@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LatestServerToComWithAndroidPhone:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LatestServerToComWithAndroidPhone_jar</output-path>
+    <root id="archive" name="LatestServerToComWithAndroidPhone.jar">
+      <element id="module-output" name="LatestServerToComWithAndroidPhone" />
+    </root>
+  </artifact>
+</component>
