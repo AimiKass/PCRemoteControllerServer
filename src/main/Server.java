@@ -26,7 +26,8 @@ public class Server {
     private static final int PREVIOUS_SONG = 5;
     private static final int NEXT_SONG = 6;
     private static final int SPEAK = 7;
-    private static final int MONITOR_ON_OFF = 8;
+    private static final int MONITOR_ON = 8;
+    private static final int MONITOR_OFF = 81;
     private static final int MIN_TILL_MON_OFF = 9;
     private static final int SHUTDOWN = 10;
     private static final int RESTART = 11;
@@ -91,26 +92,32 @@ public class Server {
                         break;
                     case SPEAK:
                         System.out.println("SPEAK executed");
-                        nircmd.exeNormalCommand("speak text "+message.split("@")[1]);
+                        nircmd.exeNormalCommand("speak text \""+message.split("@")[1]+"\"");
                         break;
-                    case MONITOR_ON_OFF:
-                        System.out.println("MONITOR_ON_OFF executed");
-                        nircmd.exeNormalCommand("monitor async_off");
+                    case MONITOR_ON:
+                        System.out.println("MONITOR_ON executed");
+                        nircmd.exeNormalCommand("monitor on");
+                        break;
+                    case MONITOR_OFF:
+                        System.out.println("MONITOR_OFF executed");
+                        nircmd.exeNormalCommand("monitor off");
+                        break;
                     case MIN_TILL_MON_OFF:
                         System.out.println("MIN_TILL_MON_OFF executed");
+                        System.out.println("cmdwait "+message.split("@")[1]+" monitor off");
                         nircmd.exeNormalCommand("cmdwait "+message.split("@")[1]+" monitor off");
                         break;
                     case SHUTDOWN:
                         System.out.println("SHUTDOWN executed");
-                        nircmd.exeNormalCommand("exitwin poweroff");
+                        cmdCommands.execute("shutdown -s");
                         break;
                     case RESTART:
                         System.out.println("RESTART executed");
-                        cmdCommands.execute("shutdown -r -t "+message.split("@")[1]);
+                        cmdCommands.execute("shutdown -r");
                         break;
                     case MIN_TILL_PC_OFF:
                         System.out.println("MIN_TILL_PC_OFF executed");
-                        nircmd.exeNormalCommand("exitwin "+message.split("@")[1]+" poweroff");
+                        cmdCommands.execute("shutdown -s -t "+message.split("@")[1]);
                         break;
                     case CMD_COMMAND:
                         System.out.println("CMD_COMMAND executed");
@@ -119,6 +126,7 @@ public class Server {
                     case EXIT_SERVER:
                         System.out.println("EXIT_SERVER executed");
                         serverIs = false;
+                        break;
                     default:
                         System.out.println("default executed");
                         serverIs = false;
