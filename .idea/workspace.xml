@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff97e907-90fd-4658-9efa-adaa9a883ee0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/LatestServerToComWithAndroidPhone_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/actions/MoveCursor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/main/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/main/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Server.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,10 +21,28 @@
         <entry file="file://$PROJECT_DIR$/src/main/Server.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="107" column="97" lean-forward="true" selection-start-line="107" selection-start-column="97" selection-end-line="107" selection-end-column="97" />
+              <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/NirCmd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/CmdCommands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -67,8 +81,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1521" />
-    <option name="y" value="194" />
+    <option name="x" value="1577" />
+    <option name="y" value="185" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -81,6 +95,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -88,11 +103,33 @@
               <item name="PCRemoteControllerServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="PCRemoteControllerServer" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PCRemoteControllerServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PCRemoteControllerServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PCRemoteControllerServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PCRemoteControllerServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PCRemoteControllerServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PCRemoteControllerServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PCRemoteControllerServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PCRemoteControllerServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,11 +204,13 @@
       <workItem from="1555594352012" duration="3582000" />
       <workItem from="1555612380089" duration="715000" />
       <workItem from="1555613928090" duration="4320000" />
+      <workItem from="1555668121798" duration="990000" />
+      <workItem from="1555692982263" duration="7652000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40532000" />
+    <option name="totallyTimeSpent" value="49174000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -184,8 +223,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="194" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14978679" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15298508" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -195,7 +235,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21235102" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.80306345" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -231,6 +271,31 @@
     <entry file="file://$PROJECT_DIR$/src/repository/strings.xml" />
     <entry file="file://$PROJECT_DIR$/src/actions/SongConfigurations.java" />
     <entry file="file://$PROJECT_DIR$/src/actions/VolumeConfigurations.java" />
+    <entry file="file://$PROJECT_DIR$/src/actions/MoveCursor.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="40">
+            <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-420" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/CmdCommands.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -238,7 +303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/MoveCursor.java" />
     <entry file="file://$PROJECT_DIR$/src/actions/NirCmd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -249,7 +313,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/Server.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="107" column="97" lean-forward="true" selection-start-line="107" selection-start-column="97" selection-end-line="107" selection-end-column="97" />
+          <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

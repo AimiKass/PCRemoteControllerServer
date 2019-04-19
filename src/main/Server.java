@@ -9,7 +9,8 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server {
+public class Server
+{
 
     private static Socket socket;
     private static ServerSocket serverSocket;
@@ -17,6 +18,8 @@ public class Server {
     private static BufferedReader bufferedReader;
     private static String message;
     private static boolean serverIs;
+
+    private static final String splitCharacter = "@";
 
     private static final int EXIT_SERVER = 0;
     private static final int MOVE_CURSOR = 1;
@@ -35,17 +38,21 @@ public class Server {
     private static final int RIGHT_CLICK = 14;
     private static final int LEFT_CLICK = 15;
     private static final int CMD_COMMAND = 16;
+    private static final int KEYBOARD = 17;
+
 
     private static String path = "D:\\IntellJ_Projects\\LatestServerToComWithAndroidPhone\\nircmd";
 
 
     public static void main(String[] args) {
 
-        try {
+        try
+        {
             serverSocket = new ServerSocket(7800);
             serverIs = true;
 
-            while (serverIs) {
+            while (serverIs)
+            {
                 socket = serverSocket.accept();
                 inputStreamReader = new InputStreamReader(socket.getInputStream());
                 bufferedReader = new BufferedReader(inputStreamReader);
@@ -54,17 +61,23 @@ public class Server {
                 NirCmd nircmd = new NirCmd(path);
                 CmdCommands cmdCommands = new CmdCommands();
 
-                switch (Integer.parseInt(message.split("@")[0])) {
+                switch (Integer.parseInt(message.split(splitCharacter)[0]))
+                {
 
                     case MOVE_CURSOR:
                         System.out.println("MOVE_CURSOR executed");
                         String y = message.split("#")[1];
-                        String x = message.split("@")[1].split("#")[0];
+                        String x = message.split(splitCharacter)[1].split("#")[0];
                         nircmd.moveCursor(x,y);
                         break;
                     case VOLUME_CONF:
                         System.out.println("VOLUME_CONF executed");
-                        nircmd.exeNormalCommand("setsysvolume "+message.split("@")[1]);
+                        nircmd.exeNormalCommand("setsysvolume "+message.split(splitCharacter)[1]);
+                        break;
+                    case KEYBOARD:
+                        System.out.println("KEYBOARD executed");
+                        System.out.println("skata:"+message.split(splitCharacter)[1]);
+                        nircmd.exeNormalCommand("sendkey "+message.split(splitCharacter)[1]+" press");
                         break;
                     case RIGHT_CLICK:
                         System.out.println("RIGHT_CLICK executed");
@@ -92,7 +105,7 @@ public class Server {
                         break;
                     case SPEAK:
                         System.out.println("SPEAK executed");
-                        nircmd.exeNormalCommand("speak text \""+message.split("@")[1]+"\"");
+                        nircmd.exeNormalCommand("speak text \""+message.split(splitCharacter)[1]+"\"");
                         break;
                     case MONITOR_ON:
                         System.out.println("MONITOR_ON executed");
@@ -104,8 +117,8 @@ public class Server {
                         break;
                     case MIN_TILL_MON_OFF:
                         System.out.println("MIN_TILL_MON_OFF executed");
-                        System.out.println("cmdwait "+message.split("@")[1]+" monitor off");
-                        nircmd.exeNormalCommand("cmdwait "+message.split("@")[1]+" monitor off");
+                        System.out.println("cmdwait "+message.split(splitCharacter)[1]+" monitor off");
+                        nircmd.exeNormalCommand("cmdwait "+message.split(splitCharacter)[1]+" monitor off");
                         break;
                     case SHUTDOWN:
                         System.out.println("SHUTDOWN executed");
@@ -117,11 +130,11 @@ public class Server {
                         break;
                     case MIN_TILL_PC_OFF:
                         System.out.println("MIN_TILL_PC_OFF executed");
-                        cmdCommands.execute("shutdown -s -t "+message.split("@")[1]);
+                        cmdCommands.execute("shutdown -s -t "+message.split(splitCharacter)[1]);
                         break;
                     case CMD_COMMAND:
                         System.out.println("CMD_COMMAND executed");
-                        cmdCommands.execute(message.split("@")[1]);
+                        cmdCommands.execute(message.split(splitCharacter)[1]);
                         break;
                     case EXIT_SERVER:
                         System.out.println("EXIT_SERVER executed");
@@ -129,7 +142,6 @@ public class Server {
                         break;
                     default:
                         System.out.println("default executed");
-                        serverIs = false;
 
                 }
             }
