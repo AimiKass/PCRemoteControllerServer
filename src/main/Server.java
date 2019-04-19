@@ -65,7 +65,6 @@ public class Server
                 {
 
                     case MOVE_CURSOR:
-                        System.out.println("MOVE_CURSOR executed");
                         String y = message.split("#")[1];
                         String x = message.split(splitCharacter)[1].split("#")[0];
                         nircmd.moveCursor(x,y);
@@ -89,15 +88,16 @@ public class Server
                         break;
                     case PREVIOUS_SONG:
                         System.out.println("PREVIOUS_SONG executed");
-                        // TODO: 4/18/2019 need autoHotKey
+                        nircmd.exeNormalCommand("sendkey 0xB1 press");
                         break;
                     case NEXT_SONG:
                         System.out.println("NEXT_SONG executed");
-                        // TODO: 4/18/2019 need autoHotKey
+                        nircmd.exeNormalCommand("sendkey 0xB0 press");
                         break;
                     case PLAY_PAUSE:
                         System.out.println("PLAY_PAUSE executed");
-                        // TODO: 4/18/2019 need autoHotKey
+                        nircmd.exeNormalCommand("sendkey 0xB3 press");
+
                         break;
                     case MUTE_UNMUTE:
                         System.out.println("MUTE_UNMUTE executed");
