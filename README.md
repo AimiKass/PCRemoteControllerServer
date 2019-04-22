@@ -8,14 +8,14 @@
 ## step 1.
 - build artifact
 
-
+![alt text](https://github.com/AimiKass/PCRemoteControllerServer/blob/master/readMePhotos/buildArtifact.png "build artifact")
 
 
 
 ## step 2.
 - locate artifact (PCRemoteControllerServer\out\artifacts\LatestServerToComWithAndroidPhone_jar)
 
-
+![alt text](https://github.com/AimiKass/PCRemoteControllerServer/blob/master/readMePhotos/locateArtifact.png "locate artifact")
 
 
 ## step 3.
