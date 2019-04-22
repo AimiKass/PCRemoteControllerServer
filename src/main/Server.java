@@ -2,7 +2,9 @@ package main;
 
 import actions.CmdCommands;
 import actions.NirCmd;
+import notifications.WindowsNotification;
 
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,7 +19,6 @@ public class Server
     private static InputStreamReader inputStreamReader;
     private static BufferedReader bufferedReader;
     private static String message;
-    private static boolean serverIs;
 
     private static final String splitCharacter = "@";
 
@@ -41,25 +42,27 @@ public class Server
     private static final int KEYBOARD = 17;
 
 
-    private static String path = "D:\\IntellJ_Projects\\LatestServerToComWithAndroidPhone\\nircmd";
 
-
-    public static void main(String[] args) {
-
+    public static void main(String[] args)
+    {
         try
         {
-            serverSocket = new ServerSocket(7800);
-            serverIs = true;
 
-            while (serverIs)
+            sendWindowsMessage("Server Is Running");
+
+            // TODO: 4/22/2019 catch exception port already in use
+            serverSocket = new ServerSocket(7800);
+
+            while (true)
             {
                 socket = serverSocket.accept();
                 inputStreamReader = new InputStreamReader(socket.getInputStream());
                 bufferedReader = new BufferedReader(inputStreamReader);
                 message = bufferedReader.readLine();
 
-                NirCmd nircmd = new NirCmd(path);
+                NirCmd nircmd = new NirCmd();
                 CmdCommands cmdCommands = new CmdCommands();
+
 
                 switch (Integer.parseInt(message.split(splitCharacter)[0]))
                 {
@@ -97,7 +100,6 @@ public class Server
                     case PLAY_PAUSE:
                         System.out.println("PLAY_PAUSE executed");
                         nircmd.exeNormalCommand("sendkey 0xB3 press");
-
                         break;
                     case MUTE_UNMUTE:
                         System.out.println("MUTE_UNMUTE executed");
@@ -122,7 +124,7 @@ public class Server
                         break;
                     case SHUTDOWN:
                         System.out.println("SHUTDOWN executed");
-                        cmdCommands.execute("shutdown -s");
+                        nircmd.exeNormalCommand("exitwin poweroff");
                         break;
                     case RESTART:
                         System.out.println("RESTART executed");
@@ -138,17 +140,25 @@ public class Server
                         break;
                     case EXIT_SERVER:
                         System.out.println("EXIT_SERVER executed");
-                        serverIs = false;
+                        sendWindowsMessage("Server Closed");
+                        System.exit(0);
                         break;
                     default:
+                        sendWindowsMessage("Server Closed");
                         System.out.println("default executed");
 
                 }
             }
-        } catch (IOException e)
+        } catch (IOException | AWTException e)
         {
             e.printStackTrace();
         }
 
+    }
+
+    private static  void sendWindowsMessage(String text) throws AWTException
+    {
+        WindowsNotification windowsNotification = new WindowsNotification();
+        windowsNotification.displayTray(text);
     }
 }
