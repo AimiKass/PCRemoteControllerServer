@@ -2,15 +2,18 @@ package main;
 
 import actions.CmdCommands;
 import actions.NirCmd;
+import databaseActions.DbActions;
 import notifications.WindowsNotification;
 
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
+// TODO: 4/24/2019 make icon appears in taskbar
 public class Server
 {
 
@@ -21,6 +24,8 @@ public class Server
     private static String message;
 
     private static final String splitCharacter = "@";
+    private static final Path databasePath = Paths.get("src\\database\\portNumber.txt");
+    private static final Path databasePathInCaseOfArtifact = Paths.get("newDatabase\\portNumber.txt");
 
     private static final int EXIT_SERVER = 0;
     private static final int MOVE_CURSOR = 1;
@@ -43,15 +48,29 @@ public class Server
 
 
 
-    public static void main(String[] args)
+
+    public static void main(String[] args) throws AWTException
     {
+        DbActions dbActions = new DbActions(databasePath, databasePathInCaseOfArtifact);
+
+        if (!Files.exists(databasePath) && !Files.exists(databasePathInCaseOfArtifact))
+        {
+            dbActions.setPort("7800");
+        }
+
+
         try
         {
+            int port = dbActions.getPort();
 
             sendWindowsMessage("Server Is Running");
+//            sendWindowsMessage(Integer.toString(port));
+//            System.out.println(port);
 
-            // TODO: 4/22/2019 catch exception port already in use
-            serverSocket = new ServerSocket(7800);
+            // TODO: 4/24/2019 catch the exception the server is running into artifacts project
+
+
+            serverSocket = new ServerSocket(port);
 
             while (true)
             {
@@ -68,9 +87,7 @@ public class Server
                 {
 
                     case MOVE_CURSOR:
-                        String y = message.split("#")[1];
-                        String x = message.split(splitCharacter)[1].split("#")[0];
-                        nircmd.moveCursor(x,y);
+                        nircmd.moveCursor(message.split(splitCharacter)[1].split("#")[0],message.split("#")[1]);
                         break;
                     case VOLUME_CONF:
                         System.out.println("VOLUME_CONF executed");
@@ -146,12 +163,16 @@ public class Server
                     default:
                         sendWindowsMessage("Server Closed");
                         System.out.println("default executed");
+                        System.exit(0);
 
                 }
             }
-        } catch (IOException | AWTException e)
+        } catch (Exception e)
         {
+            sendWindowsMessage("Server crashed");
+            sendWindowsMessage(e.getMessage());
             e.printStackTrace();
+            System.exit(0);
         }
 
     }
