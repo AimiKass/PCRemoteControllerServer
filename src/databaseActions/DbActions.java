@@ -3,10 +3,7 @@ package databaseActions;
 import notifications.WindowsNotification;
 
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -23,8 +20,7 @@ public class DbActions
     }
 
 
-    public int getPort() throws AWTException
-    {
+    public int getPort() throws AWTException {
 
         int port =7800;
 
@@ -57,8 +53,7 @@ public class DbActions
     }
 
 
-    public void setPort(String port) throws AWTException
-    {
+    public void setPort(String port) throws AWTException {
         try
         {
             // TODO: 4/24/2019 #1 check validity !!!!!
