@@ -6,14 +6,15 @@ import databaseActions.DbActions;
 import notifications.WindowsNotification;
 
 import java.awt.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-// TODO: 4/24/2019 make icon appears in taskbar
 public class Server
 {
 
@@ -49,8 +50,7 @@ public class Server
 
 
 
-    public static void main(String[] args) throws AWTException
-    {
+    public static void main(String[] args) throws AWTException {
         DbActions dbActions = new DbActions(databasePath, databasePathInCaseOfArtifact);
 
         if (!Files.exists(databasePath) && !Files.exists(databasePathInCaseOfArtifact))
@@ -63,11 +63,7 @@ public class Server
         {
             int port = dbActions.getPort();
 
-            sendWindowsMessage("Server Is Running");
-//            sendWindowsMessage(Integer.toString(port));
-//            System.out.println(port);
-
-            // TODO: 4/24/2019 catch the exception the server is running into artifacts project
+            sendWindowsMessage("Server Is Running "+port);
 
 
             serverSocket = new ServerSocket(port);
@@ -177,8 +173,7 @@ public class Server
 
     }
 
-    private static  void sendWindowsMessage(String text) throws AWTException
-    {
+    private static  void sendWindowsMessage(String text) throws AWTException {
         WindowsNotification windowsNotification = new WindowsNotification();
         windowsNotification.displayTray(text);
     }

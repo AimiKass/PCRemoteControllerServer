@@ -1,11 +1,13 @@
 package actions;
 
+import notifications.WindowsNotification;
+
+import java.awt.*;
 import java.io.IOException;
 
 public class CmdCommands
 {
-    public void execute(String command)
-    {
+    public void execute(String command) throws AWTException {
         try
         {
             ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", command);
@@ -15,6 +17,8 @@ public class CmdCommands
         }catch (IOException e)
         {
             e.printStackTrace();
+            WindowsNotification windowsNotification = new WindowsNotification();
+            windowsNotification.displayTray(e.getMessage());
         }
     }
 }
