@@ -2,12 +2,16 @@ package actions;
 
 import notifications.WindowsNotification;
 
+import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 
 public class CmdCommands
 {
-    public void execute(String command) throws AWTException {
+    private static JFrame frame = new JFrame();
+
+    public void execute(String command) throws AWTException
+    {
         try
         {
             ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", command);
@@ -16,9 +20,14 @@ public class CmdCommands
 
         }catch (IOException e)
         {
-            e.printStackTrace();
-            WindowsNotification windowsNotification = new WindowsNotification();
-            windowsNotification.displayTray(e.getMessage());
+            try {
+                e.printStackTrace();
+                WindowsNotification windowsNotification = new WindowsNotification();
+                windowsNotification.displayTray(e.getMessage());
+            }catch (AWTException e1)
+            {
+                JOptionPane.showMessageDialog(frame, "CmdCommands class, execute function error");
+            }
         }
     }
 }

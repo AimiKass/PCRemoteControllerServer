@@ -2,8 +2,12 @@ package databaseActions;
 
 import notifications.WindowsNotification;
 
+import javax.swing.*;
 import java.awt.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -12,6 +16,8 @@ public class DbActions
 
     private Path databasePath;
     private Path databasePathInCaseOfArtifact;
+    private static JFrame frame = new JFrame();
+
 
     public DbActions(Path databasePath,Path databasePathInCaseOfArtifact)
     {
@@ -20,7 +26,8 @@ public class DbActions
     }
 
 
-    public int getPort() throws AWTException {
+    public int getPort()
+    {
 
         int port =7800;
 
@@ -41,10 +48,17 @@ public class DbActions
 
             }catch (Exception e2)
             {
-                WindowsNotification windowsNotification = new WindowsNotification();
-                windowsNotification.displayTray(e2.getMessage());
-                windowsNotification.displayTray("Server crashed");
-                System.exit(0);
+                try {
+
+                    WindowsNotification windowsNotification = new WindowsNotification();
+                    windowsNotification.displayTray(e2.getMessage());
+                    windowsNotification.displayTray("Server crashed");
+                    System.exit(0);
+                }catch (AWTException e3)
+                {
+                    JOptionPane.showMessageDialog(frame, "PC Remote Controller Crushed");
+                }
+
             }
 
         }
@@ -53,7 +67,8 @@ public class DbActions
     }
 
 
-    public void setPort(String port) throws AWTException {
+    public void setPort(String port)
+    {
         try
         {
             // TODO: 4/24/2019 #1 check validity !!!!!
@@ -72,10 +87,16 @@ public class DbActions
 
             }catch (Exception e2)
             {
-                WindowsNotification windowsNotification = new WindowsNotification();
-                windowsNotification.displayTray(e2.getMessage());
-                windowsNotification.displayTray("Server crashed");
-                System.exit(0);
+                try {
+
+                    WindowsNotification windowsNotification = new WindowsNotification();
+                    windowsNotification.displayTray(e2.getMessage());
+                    windowsNotification.displayTray("Server crashed");
+                    System.exit(0);
+                }catch (AWTException e3)
+                {
+                    JOptionPane.showMessageDialog(frame, "PC Remote Controller Crushed");
+                }
             }
         }
     }

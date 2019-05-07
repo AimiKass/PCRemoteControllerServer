@@ -5,9 +5,9 @@ import actions.NirCmd;
 import databaseActions.DbActions;
 import notifications.WindowsNotification;
 
+import javax.swing.*;
 import java.awt.*;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -23,6 +23,7 @@ public class Server
     private static InputStreamReader inputStreamReader;
     private static BufferedReader bufferedReader;
     private static String message;
+    static JFrame frame = new JFrame();
 
     private static final String splitCharacter = "@";
     private static final Path databasePath = Paths.get("src\\database\\portNumber.txt");
@@ -173,8 +174,16 @@ public class Server
 
     }
 
-    private static  void sendWindowsMessage(String text) throws AWTException {
-        WindowsNotification windowsNotification = new WindowsNotification();
-        windowsNotification.displayTray(text);
+    private static  void sendWindowsMessage(String text)
+    {
+        try {
+            WindowsNotification windowsNotification = new WindowsNotification();
+            windowsNotification.displayTray(text);
+        }catch (AWTException e)
+        {
+            JOptionPane.showMessageDialog(frame, "PC Remote Controller Crushed");
+        }
+
+
     }
 }
