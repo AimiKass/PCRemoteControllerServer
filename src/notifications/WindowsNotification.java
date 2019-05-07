@@ -21,7 +21,7 @@ public class WindowsNotification
         BufferedImage image = null;
         try
         {
-            image = ImageIO.read(new File("C:\\Users\\you\\Desktop\\serverTaskBarIcon.png"));
+            image = ImageIO.read(new File("photos\\appPhotos\\serverTaskBarIcon.png"));
 
         } catch (IOException e)
         {
