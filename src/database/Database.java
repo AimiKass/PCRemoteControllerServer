@@ -1,4 +1,4 @@
-package databaseActions;
+package database;
 
 import notifications.WindowsNotification;
 
@@ -11,7 +11,7 @@ import java.io.FileWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class DbActions
+public class Database
 {
 
     private Path databasePath;
@@ -19,7 +19,7 @@ public class DbActions
     private static JFrame frame = new JFrame();
 
 
-    public DbActions(Path databasePath,Path databasePathInCaseOfArtifact)
+    public Database(Path databasePath, Path databasePathInCaseOfArtifact)
     {
         this.databasePath = databasePath;
         this.databasePathInCaseOfArtifact = databasePathInCaseOfArtifact;
@@ -72,7 +72,6 @@ public class DbActions
         try
         {
             // TODO: 4/24/2019 #1 check validity !!!!!
-            // TODO: 4/24/2019 split in new class
             BufferedWriter writer = new BufferedWriter(new FileWriter(databasePath.toString()));
             writer.write(port);
             writer.close();

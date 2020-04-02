@@ -4,30 +4,26 @@ import notifications.WindowsNotification;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
 
 public class NirCmd
 {
 
     private static JFrame frame = new JFrame();
-
+    private  CmdCommands cmdCommand ;
 
     public void exeNormalCommand(String command)
     {
         try
         {
-            ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe","/c", " nircmd.exe "+command);
-            processBuilder.redirectErrorStream(true);
-            processBuilder.start();
+            cmdCommand = new CmdCommands();
+            cmdCommand.execute("nircmd.exe "+command);
 
-        }catch (IOException e)
-        {
+        }catch (AWTException e) {
             try {
                 e.printStackTrace();
                 WindowsNotification windowsNotification = new WindowsNotification();
                 windowsNotification.displayTray(e.getMessage());
-            }catch (AWTException e1)
-            {
+            } catch (AWTException e1) {
                 JOptionPane.showMessageDialog(frame, "NirCmd class , exeNormalCommand function error");
             }
         }
@@ -38,11 +34,10 @@ public class NirCmd
     {
         try
         {
-            ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe","/c", " nircmd.exe movecursor "+x+" "+y);
-            processBuilder.redirectErrorStream(true);
-            processBuilder.start();
+            cmdCommand = new CmdCommands();
+            cmdCommand.execute(" nircmd.exe movecursor "+x+" "+y);
 
-        }catch (IOException e)
+        }catch (AWTException e)
         {
             try {
                 e.printStackTrace();
