@@ -2,7 +2,8 @@ package main;
 
 import actions.CmdCommands;
 import actions.NirCmd;
-import databaseActions.DbActions;
+import actions.SendToClient;
+import database.Database;
 import notifications.WindowsNotification;
 
 import javax.swing.*;
@@ -18,11 +19,7 @@ import java.nio.file.Paths;
 public class Server
 {
 
-    private static Socket socket;
-    private static ServerSocket serverSocket;
-    private static InputStreamReader inputStreamReader;
-    private static BufferedReader bufferedReader;
-    private static String message;
+    private static Process process = null;
     static JFrame frame = new JFrame();
 
     private static final String splitCharacter = "@";
@@ -47,53 +44,67 @@ public class Server
     private static final int LEFT_CLICK = 15;
     private static final int CMD_COMMAND = 16;
     private static final int KEYBOARD = 17;
+    private static final int GET_SYSTEM_VOLUME = 18;
+    private static final int VERIFICATION_MESSAGE =19;
+    private static final int SPEAKER_ON =20;
+    private static final int SPEAKER_OFF =201;
 
 
-
-
-    public static void main(String[] args) throws AWTException {
-        DbActions dbActions = new DbActions(databasePath, databasePathInCaseOfArtifact);
+    public static void main(String[] args)
+    {
+        Database database = new Database(databasePath, databasePathInCaseOfArtifact);
 
         if (!Files.exists(databasePath) && !Files.exists(databasePathInCaseOfArtifact))
-        {
-            dbActions.setPort("7800");
-        }
+            database.setPort("7800");
 
 
         try
         {
-            int port = dbActions.getPort();
+            int port = database.getPort();
 
             sendWindowsMessage("Server Is Running "+port);
 
 
-            serverSocket = new ServerSocket(port);
+            ServerSocket serverSocket = new ServerSocket(port);
 
             while (true)
             {
-                socket = serverSocket.accept();
-                inputStreamReader = new InputStreamReader(socket.getInputStream());
-                bufferedReader = new BufferedReader(inputStreamReader);
-                message = bufferedReader.readLine();
+                Socket socket = serverSocket.accept();
+                InputStreamReader inputStreamReader = new InputStreamReader(socket.getInputStream());
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String message = bufferedReader.readLine();
 
                 NirCmd nircmd = new NirCmd();
                 CmdCommands cmdCommands = new CmdCommands();
+                SendToClient sendToClient = new SendToClient(socket);
+
 
 
                 switch (Integer.parseInt(message.split(splitCharacter)[0]))
                 {
 
                     case MOVE_CURSOR:
-                        nircmd.moveCursor(message.split(splitCharacter)[1].split("#")[0],message.split("#")[1]);
+                        nircmd.moveCursor(message.split(splitCharacter)[1].split("#")[0], message.split("#")[1]);
                         break;
                     case VOLUME_CONF:
                         System.out.println("VOLUME_CONF executed");
-                        nircmd.exeNormalCommand("setsysvolume "+message.split(splitCharacter)[1]);
+                        nircmd.exeNormalCommand("setsysvolume "+ message.split(splitCharacter)[1]);
+                        break;
+                    case GET_SYSTEM_VOLUME:
+                        sendToClient.systemsVolume();
+                        break;
+                    case SPEAKER_ON:
+                        System.out.println("SPEAKER_ON executed");
+                        process = Runtime.getRuntime().exec("src\\PCRemContCommunicationServer");
+                        break;
+                    case SPEAKER_OFF:
+                        System.out.println("SPEAKER_OFF executed");
+                        if (process != null)
+                        process.destroy();
                         break;
                     case KEYBOARD:
                         System.out.println("KEYBOARD executed");
-                        System.out.println("skata:"+message.split(splitCharacter)[1]);
-                        nircmd.exeNormalCommand("sendkey "+message.split(splitCharacter)[1]+" press");
+                        nircmd.exeNormalCommand("sendkey "+ message.split(splitCharacter)[1]+" press");
                         break;
                     case RIGHT_CLICK:
                         System.out.println("RIGHT_CLICK executed");
@@ -121,7 +132,7 @@ public class Server
                         break;
                     case SPEAK:
                         System.out.println("SPEAK executed");
-                        nircmd.exeNormalCommand("speak text \""+message.split(splitCharacter)[1]+"\"");
+                        nircmd.exeNormalCommand("speak text \""+ message.split(splitCharacter)[1]+"\"");
                         break;
                     case MONITOR_ON:
                         System.out.println("MONITOR_ON executed");
@@ -133,8 +144,8 @@ public class Server
                         break;
                     case MIN_TILL_MON_OFF:
                         System.out.println("MIN_TILL_MON_OFF executed");
-                        System.out.println("cmdwait "+message.split(splitCharacter)[1]+" monitor off");
-                        nircmd.exeNormalCommand("cmdwait "+message.split(splitCharacter)[1]+" monitor off");
+                        System.out.println("cmdwait "+ message.split(splitCharacter)[1]+" monitor off");
+                        nircmd.exeNormalCommand("cmdwait "+ message.split(splitCharacter)[1]+" monitor off");
                         break;
                     case SHUTDOWN:
                         System.out.println("SHUTDOWN executed");
@@ -146,11 +157,15 @@ public class Server
                         break;
                     case MIN_TILL_PC_OFF:
                         System.out.println("MIN_TILL_PC_OFF executed");
-                        cmdCommands.execute("shutdown -s -t "+message.split(splitCharacter)[1]);
+                        cmdCommands.execute("shutdown -s -t "+ message.split(splitCharacter)[1]);
                         break;
                     case CMD_COMMAND:
                         System.out.println("CMD_COMMAND executed");
                         cmdCommands.execute(message.split(splitCharacter)[1]);
+                        break;
+                    case VERIFICATION_MESSAGE:
+                        System.out.println("VERIFICATION_MESSAGE executed");
+                        sendToClient.verificationMsg();
                         break;
                     case EXIT_SERVER:
                         System.out.println("EXIT_SERVER executed");
@@ -183,7 +198,5 @@ public class Server
         {
             JOptionPane.showMessageDialog(frame, "PC Remote Controller Crushed");
         }
-
-
     }
 }

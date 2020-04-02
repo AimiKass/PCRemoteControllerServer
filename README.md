@@ -7,7 +7,7 @@ ___
 - Clone and run it on your IDE
 
 ## step 2.
-- By default a .txt file is created PCRemoteControllerServer\src\database\portNumber.txt
+- By default a .txt file is created PCRemoteControllerServer\src\repository\portNumber.txt
 there you can specify with what port you wanna work with (default port: 7800)
 
 ## step 3.

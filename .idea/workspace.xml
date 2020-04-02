@@ -7,68 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff97e907-90fd-4658-9efa-adaa9a883ee0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/SendToClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/SystemVolume.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/LatestServerToComWithAndroidPhone_jar/LatestServerToComWithAndroidPhone.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LatestServerToComWithAndroidPhone_jar/LatestServerToComWithAndroidPhone.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/META-INF/LatestServerToComWithAndroidPhone.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/META-INF/LatestServerToComWithAndroidPhone.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/actions/CmdCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/actions/CmdCommands.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/actions/NirCmd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/actions/NirCmd.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/databaseActions/DbActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/databaseActions/DbActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/databaseActions/DbActions.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/main/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/main/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/notifications/WindowsNotification.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LatestServerToComWithAndroidPhone/notifications/WindowsNotification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/CmdCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/CmdCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/NirCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/NirCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databaseActions/DbActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/databaseActions/DbActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databaseActions/DbActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/notifications/WindowsNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/notifications/WindowsNotification.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="169" column="12" selection-start-line="169" selection-start-column="12" selection-end-line="169" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/databaseActions/DbActions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1555">
-              <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/notifications/WindowsNotification.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -81,76 +47,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Maaaaain.java" />
-        <option value="$PROJECT_DIR$/src/newPortListener.java" />
-        <option value="$PROJECT_DIR$/src/ListenerToAnoterPort.java" />
-        <option value="$PROJECT_DIR$/src/actions/CmdCommans.java" />
-        <option value="$PROJECT_DIR$/src/Server.java" />
-        <option value="$PROJECT_DIR$/src/actions/MoveCursor.java" />
-        <option value="$PROJECT_DIR$/src/actions/SongConfigurations.java" />
-        <option value="$PROJECT_DIR$/src/repository/strings.fxml" />
-        <option value="$PROJECT_DIR$/src/repository/strings.xml" />
-        <option value="$PROJECT_DIR$/src/actions/VolumeConfigurations.java" />
-        <option value="$PROJECT_DIR$/src/actions/Nircmd.java" />
-        <option value="$PROJECT_DIR$/src/main/Teeeest.java" />
-        <option value="$PROJECT_DIR$/src/main/WindowsNotification.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/src/databaseActions/DbRead.java" />
-        <option value="$PROJECT_DIR$/src/actions/CmdCommands.java" />
-        <option value="$PROJECT_DIR$/src/actions/NirCmd.java" />
-        <option value="$PROJECT_DIR$/src/main/Server.java" />
-        <option value="$PROJECT_DIR$/src/databaseActions/DbActions.java" />
-        <option value="$PROJECT_DIR$/src/notifications/WindowsNotification.java" />
-      </list>
-    </option>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-352" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
-  </component>
+  <component name="ProjectId" id="1Rv5K43rnv0k1e1OC7UW8TGdsKa" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PCRemoteControllerServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PCRemoteControllerServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PCRemoteControllerServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PCRemoteControllerServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/Intellj/android" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/IntellJ_Projects/skataaaaaaaaaaaaaaaaaaaaaaaaaaa" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -164,18 +85,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Github\PCRemoteControllerServer\src\repository" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -241,243 +150,96 @@
       <workItem from="1556791195427" duration="1364000" />
       <workItem from="1556793588504" duration="1759000" />
       <workItem from="1556798307325" duration="2977000" />
-      <workItem from="1557252472606" duration="1401000" />
+      <workItem from="1557252472606" duration="1739000" />
+      <workItem from="1557305006216" duration="232000" />
+      <workItem from="1557410616012" duration="61000" />
+      <workItem from="1557410821101" duration="661000" />
+      <workItem from="1557831944282" duration="203000" />
+      <workItem from="1570534662955" duration="1164000" />
+      <workItem from="1570791077600" duration="596000" />
+      <workItem from="1580742900654" duration="82000" />
+      <workItem from="1580851838321" duration="3452000" />
+      <workItem from="1584519770770" duration="75000" />
+      <workItem from="1584519856813" duration="1265000" />
+      <workItem from="1584541466159" duration="15806000" />
+      <workItem from="1584635353220" duration="1891000" />
+      <workItem from="1584695410933" duration="9300000" />
+      <workItem from="1584909773533" duration="4811000" />
+      <workItem from="1584964725811" duration="2158000" />
+      <workItem from="1584999954832" duration="154000" />
+      <workItem from="1585858496321" duration="3315000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90518000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Learn" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30769232" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="SciView" order="9" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nircmd/nircmd2.html" />
-    <entry file="file://$PROJECT_DIR$/src/newPortListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/ListenerToAnoterPort.java" />
-    <entry file="file://$USER_HOME$/Desktop/JoyStickController/src/app/akexorcist/joystickcontroller/JoyStickClass.java" />
-    <entry file="file://$PROJECT_DIR$/src/repository/strings.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/repository/styles.xml" />
-    <entry file="file://$PROJECT_DIR$/src/repository/strings.xml" />
-    <entry file="file://$PROJECT_DIR$/src/actions/SongConfigurations.java" />
-    <entry file="file://$PROJECT_DIR$/src/actions/VolumeConfigurations.java" />
-    <entry file="file://$PROJECT_DIR$/src/actions/MoveCursor.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="40">
-            <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/portNumber.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/NirCmd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/CmdCommands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" column="80" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/databaseActions/DbActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1555">
-          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.desktop/javax/imageio/ImageIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="1307" column="18" selection-start-line="1307" selection-start-column="18" selection-end-line="1307" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="169" column="12" selection-start-line="169" selection-start-column="12" selection-end-line="169" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/notifications/WindowsNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>LatestServerToComWithAndroidPhone:jar</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>10</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>LatestServerToComWithAndroidPhone</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="WindowStateProjectService">
+    <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584520290507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584520290507" />
+    <state x="640" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584519799183">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584519799183" />
+    <state x="464" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584917386199">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="464" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584917386199" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585862568761">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1585862568761" />
+    <state width="1877" height="154" key="GridCell.Tab.0.bottom" timestamp="1585864959505">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="154" key="GridCell.Tab.0.bottom/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1585864959505" />
+    <state width="1877" height="154" key="GridCell.Tab.0.bottom/1920.202.1920.1040/0.0.1920.1040@1920.202.1920.1040" timestamp="1584911017405" />
+    <state width="1877" height="154" key="GridCell.Tab.0.center" timestamp="1585864959496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="154" key="GridCell.Tab.0.center/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1585864959496" />
+    <state width="1877" height="154" key="GridCell.Tab.0.center/1920.202.1920.1040/0.0.1920.1040@1920.202.1920.1040" timestamp="1584911017405" />
+    <state width="1877" height="154" key="GridCell.Tab.0.left" timestamp="1585864959496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="154" key="GridCell.Tab.0.left/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1585864959496" />
+    <state width="1877" height="154" key="GridCell.Tab.0.left/1920.202.1920.1040/0.0.1920.1040@1920.202.1920.1040" timestamp="1584911017405" />
+    <state width="1877" height="154" key="GridCell.Tab.0.right" timestamp="1585864959505">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="154" key="GridCell.Tab.0.right/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1585864959505" />
+    <state width="1877" height="154" key="GridCell.Tab.0.right/1920.202.1920.1040/0.0.1920.1040@1920.202.1920.1040" timestamp="1584911017405" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1584741334900">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584741334900" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584569963438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584569963438" />
+    <state x="342" y="140" key="new project wizard" timestamp="1584965685632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584965685632" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584741326880">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.202.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584741326880" />
+    <state x="2543" y="427" width="672" height="678" key="search.everywhere.popup/1920.202.1920.1040/0.0.1920.1040@1920.202.1920.1040" timestamp="1584569347369" />
   </component>
 </project>
