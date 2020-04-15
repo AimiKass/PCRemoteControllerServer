@@ -95,14 +95,17 @@ public class Server
                         break;
                     case SPEAKER_ON:
                         System.out.println("SPEAKER_ON executed");
-                        process = Runtime.getRuntime().exec("src\\PCRemContCommunicationServer");
+                        ProcessBuilder processBuilder = new ProcessBuilder("java","-jar","src\\PCRemContCommunicationServer.jar");
+                        process = processBuilder.start();
                         break;
                     case SPEAKER_OFF:
                         System.out.println("SPEAKER_OFF executed");
-                        if (process != null)
                         process.destroy();
+                        if (process.isAlive())
+                            process.destroyForcibly();
                         break;
                     case KEYBOARD:
+                        // TODO: 4/14/2020 do it with Robot Class !
                         System.out.println("KEYBOARD executed");
                         nircmd.exeNormalCommand("sendkey "+ message.split(splitCharacter)[1]+" press");
                         break;
